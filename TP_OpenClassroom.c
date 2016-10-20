@@ -19,28 +19,20 @@ int main(int argc, char *argv[])
     srand(time(NULL));
     int nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
     printf("%d \n",nombreMystere);
-
-    
-    do
-    {
-        printf("Quel est le nombre ? \n");
-        scanf("%d",&nombre1);
-    
-    
-    if (nombre1<nombreMystere)
+    printf("Quel est le nombre ? \n");
+    scanf("%d",&nombre1);
+    if (nombre1<nombre)
     {
         printf("C'est plus \n");
     }
-    else if (nombre1>nombreMystere)
+    else if (nombre1>nombre)
     {
-        printf("C'est moins \n");
+        printf("C'est moins");
     }
     else
     {
         printf("Bravo, vous avez trouvé ! \n");
     }
-        
-    } while (nombre1!=nombreMystere);
     
     return 0;
 }
